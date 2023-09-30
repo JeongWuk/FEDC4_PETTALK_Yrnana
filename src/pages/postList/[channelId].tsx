@@ -133,8 +133,12 @@ const PostListPageWrapper = styled.div`
 `
 
 const NewPostButton = styled.button`
-  width: 50px;
+  width: 40px;
   height: 30px;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   background-color: ${theme.palette.CORAL};
 `

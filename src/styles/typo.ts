@@ -4,7 +4,7 @@ export const calcRem = (px: number) => `${px / 16}rem`
 export const typo = {
   LogoFont_50: css`
     font-family: 'InkLipquid';
-    font-size: ${calcRem(50)};
+    font-size: ${calcRem(70)};
     font-weight: 500;
   `,
   LogoFont_30: css`

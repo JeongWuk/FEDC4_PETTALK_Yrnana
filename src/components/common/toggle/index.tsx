@@ -18,9 +18,7 @@ const Toggle = () => {
   return (
     <>
       <Input type={'checkbox'} readOnly checked={isDarkMode} />
-      <Label onClick={handleToggle}>
-        {isDarkMode ? <Sun width={21} height={21} /> : <Moon src={moon} />}
-      </Label>
+      <Label onClick={handleToggle} />
     </>
   )
 }

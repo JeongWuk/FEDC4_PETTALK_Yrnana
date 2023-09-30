@@ -83,12 +83,12 @@ const Login = () => {
         {loading ? <Greetings className={animation ? '' : 'fade-out'} /> : ''}
         <Text typo={'LogoFont_50'}>{'Pet Talk'}</Text>
         <Spacing size={50} />
-        <Input width={200} ref={emailInputRef} placeholder={'email'}></Input>
+        <Input width={200} ref={emailInputRef} placeholder={'이메일'}></Input>
         <Spacing size={22} />
         <Input
           width={200}
           ref={passwordInputRef}
-          placeholder={'password'}
+          placeholder={'비밀번호'}
           type={'password'}
         ></Input>
         <Spacing size={50} />

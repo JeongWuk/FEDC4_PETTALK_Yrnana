@@ -94,7 +94,7 @@ const AppBar = ({ mainPage = false, title = '게시글 보기', backurl }: AppBa
 
         <ProfileImage
           image={userData.image}
-          size={40}
+          size={35}
           updatable={false}
           style={{ cursor: 'pointer' }}
           onClick={() => navigate('/myprofile')}
