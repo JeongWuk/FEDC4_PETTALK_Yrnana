@@ -25,14 +25,14 @@ const CreateChannel = () => {
   const channelTitleRef = useRef<HTMLInputElement>(null)
   const channelDesRef = useRef<HTMLInputElement>(null)
 
-  useEffect(() => {
-    if (localStorage.getItem('role') === 'SuperAdmin') {
-      axiosAPI.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('token')}`
-    } else {
-      openModal({ content: '관리자의 권한이 필요합니다!', type: 'warning' })
-      navigate('/')
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (localStorage.getItem('role') === 'SuperAdmin') {
+  //     axiosAPI.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('token')}`
+  //   } else {
+  //     openModal({ content: '관리자의 권한이 필요합니다!', type: 'warning' })
+  //     navigate('/')
+  //   }
+  // }, [])
   const handleCreateChannel = () => {
     if (channelTitleRef.current && channelDesRef.current) {
       if (channelTitleRef?.current.value === '') {

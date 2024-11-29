@@ -34,7 +34,7 @@ const ProfileImage = ({
 
   const handleImageChange = () => {
     if (imgRef.current && imgRef.current?.files) {
-      if (imgRef.current.files[0].length === 0) return
+      // if (imgRef.current.files[0].length === 0) return
 
       axiosAPI
         .post(

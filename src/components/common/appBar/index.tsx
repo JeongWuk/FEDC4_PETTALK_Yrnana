@@ -29,18 +29,22 @@ const AppBar = ({ mainPage = false, title = '게시글 보기', backurl }: AppBa
   const [notifyList, setNotifyList] = useState([])
 
   const [isSeen, setIsSeen] = useState(true)
-  const getNotification = async () => {
-    return await axiosAPI.get('/notifications')
-  }
-  const { data } = useQuery(['notificationList'], getNotification, {
-    refetchInterval: 2000,
-    refetchIntervalInBackground: true,
-    retry: 3,
-    onSuccess: (data) => {
-      if (data !== undefined) setNotifyList(data.data)
-      if (notifyList.length && data?.data.length !== notifyList.length) setIsSeen(false)
-    },
-  })
+  // const getNotification = async () => {
+  //   return await axiosAPI.get('/notifications')
+  // }
+  // const { data } = useQuery(['notificationList'], getNotification, {
+  //   refetchInterval: 2000,
+  //   refetchIntervalInBackground: true,
+  //   retry: 3,
+  //   onSuccess: (data) => {
+  //     if (data !== undefined) setNotifyList(data.data)
+  //     if (notifyList.length && data?.data.length !== notifyList.length) setIsSeen(false)
+  //   },
+  // })
+
+  const data = {
+    data: []
+  };
 
   const handleSeenPost = async () => {
     return await axiosAPI.put('/notifications/seen')
@@ -53,7 +57,7 @@ const AppBar = ({ mainPage = false, title = '게시글 보기', backurl }: AppBa
   })
   useEffect(() => {
     if (data !== undefined) setNotifyList(data.data)
-  })
+  }, [])
   return (
     <HeadingBar justify={'space-between'} fullWidth={true} darkmode={isDarkMode}>
       {mainPage ? (

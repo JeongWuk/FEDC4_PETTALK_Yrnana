@@ -15,11 +15,11 @@ const userDataRoute = () => {
     return response.data
   }
 
-  useEffect(() => {
-    if (localStorage.getItem('token')) {
-      getUserData()
-    }
-  }, [localStorage.getItem('token')])
+  // useEffect(() => {
+  //   if (localStorage.getItem('token')) {
+  //     getUserData()
+  //   }
+  // }, [localStorage.getItem('token')])
 
   return <Outlet></Outlet>
 }

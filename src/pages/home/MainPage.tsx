@@ -30,13 +30,15 @@ const MainPage = ({
   ...props
 }: MainPageProps) => {
   const [isDarkMode] = useAtom(darkModeAtom)
-  const { data, isLoading, refetch } = useQuery(['channels'], () => ChannelApi.GET_CHANNEL(), {
-    cacheTime: 0,
-  })
+  // const { data, isLoading, refetch } = useQuery(['channels'], () => ChannelApi.GET_CHANNEL(), {
+  //   cacheTime: 0,
+  // })
 
-  useEffect(() => {
-    refetch()
-  }, [refetch])
+  // useEffect(() => {
+  //   refetch()
+  // }, [refetch])
+  const data: Channel[] = [];
+  const isLoading = false;
 
   const filterData = (data: Channel[]) => {
     return data.filter((item) => {

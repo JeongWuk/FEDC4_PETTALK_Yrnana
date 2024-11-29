@@ -84,7 +84,7 @@ const Register = () => {
       if (emailInputRef.current && passwordInputRef.current && userNameInputRef.current) {
         const body = {
           email: emailInputRef.current.value,
-          fullName: userNameInputRef.current.value,
+          // fullName: userNameInputRef.current.value,
           password: passwordInputRef.current.value,
         }
         registerMutation.mutate(body)

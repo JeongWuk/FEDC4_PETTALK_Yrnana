@@ -3,11 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Register from '@/pages/register/Register'
 const RegisterRouter = () => {
   return (
-    <Routes>
-      <Route path={'/'} element={<Register />}>
-        {' '}
-      </Route>
-    </Routes>
+    <Register />
   )
 }
 export default RegisterRouter

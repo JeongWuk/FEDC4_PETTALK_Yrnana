@@ -17,11 +17,11 @@ const ImageUploader = ({
   const fileTypes = ['png', 'jpeg', 'jpg']
 
   const fileUploaderHandler = (file: File) => {
-    if (file.length === 0) {
-      fileNumErrorHandler()
-    } else {
-      uploadFileHandler(file)
-    }
+    // if (file.length === 0) {
+    //   fileNumErrorHandler()
+    // } else {
+    //   uploadFileHandler(file)
+    // }
   }
   return (
     <FileUploader

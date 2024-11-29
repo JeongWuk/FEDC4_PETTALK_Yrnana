@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import ListRow from '@/components/common/ListRow'
 import Loading from '@/components/common/loading'
 import { axiosAPI } from '@/libs/apis/axios'
-import { Notification } from '@/libs/apis/notification/notificationType'
+import { NotificationType } from '@/libs/apis/notification/notificationType'
 import { userAtom } from '@/libs/store/userAtom'
 import { palette } from '@/styles/palette'
 import { typo } from '@/styles/typo'
@@ -53,7 +53,7 @@ const Notification = () => {
         <Loading />
       ) : (
         <StyleNotifyWrapper>
-          {data?.data.map((v: Notification, i: number) =>
+          {data?.data.map((v: NotificationType, i: number) =>
             v.comment ? (
               <StyleNotifyList key={v._id} onClick={() => movePostPage(v.post)}>
                 {i == 0 ? (

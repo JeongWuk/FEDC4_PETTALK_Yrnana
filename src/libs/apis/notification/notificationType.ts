@@ -1,6 +1,6 @@
 import { User } from '@/libs/apis/auth/authType'
 import { Comment } from '@/libs/apis/post/postType'
-export type Notification = {
+export type NotificationType = {
   seen: boolean
   _id: string
   author: User

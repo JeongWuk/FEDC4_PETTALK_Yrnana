@@ -39,10 +39,11 @@ const Login = () => {
 
   const loginMutation = useMutation((body: object) => loginPost(body), {
     onSuccess: (data) => {
-      setIsLoading(false)
       localStorage.setItem('token', data.data.token)
-      localStorage.setItem('role', data.data.user.role)
+      // localStorage.setItem('role', data.data.user.role)
       localStorage.setItem('isLogin', 'true')
+
+      setIsLoading(false)
 
       openModal({ content: '로그인 성공!', type: 'success' })
       navigate('/')
